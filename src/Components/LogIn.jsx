@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function LogIn() {
+
+  const [loginEmail,setLoginEmail] = useState("")
+  const [loginPassword,setLoginPassword] = useState("")
+
   return (
     <>
     <h1>ログインページ</h1>
@@ -10,6 +14,8 @@ function LogIn() {
           <input
             name="email"
             type="email"
+            value={loginEmail}
+            onChange={(e) => setLoginEmail(e.target.value)}
           />
         </div>
         <div>
@@ -17,6 +23,8 @@ function LogIn() {
           <input
             name="password"
             type="password"
+            value={loginPassword}
+            onChange={(e) => setLoginPassword(e.target.value)}
           />
         </div>
         <button>ログイン</button>
