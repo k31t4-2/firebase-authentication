@@ -4,7 +4,7 @@ import {
   onAuthStateChanged
 } from 'firebase/auth'; // 直接firebaseからimport
 import { auth } from "../firebaseConfig"; // 自分で初期化したfirebaseConfigから
-import { Navigate } from "react-router-dom";
+import { Navigate,Link } from "react-router-dom";
 
 
 function Register() {
@@ -67,7 +67,10 @@ function Register() {
             onChange={(e) => setRegisterPassword(e.target.value)}
           />
         </div>
-        <button>登録する</button>
+              <button>登録する</button>
+
+
+              <p>ログインは<Link to={`/login/`}>こちら</Link></p>
       </form>
           </>
       )}
